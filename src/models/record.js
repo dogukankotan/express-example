@@ -21,6 +21,6 @@ const recordSchema = new mongoose.Schema({
     type: Array
   }
 })
-const records = mongoose.model('records', recordSchema)
+const Record = mongoose.model('records', recordSchema)
 
-module.exports = records
+module.exports = Record
