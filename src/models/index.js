@@ -1,5 +1,5 @@
 var mongoose = require('mongoose')
-var records = require('./records')
+var Record = require('./record')
 
 /**
  * Connect mongodb database.
@@ -19,6 +19,6 @@ const connectDb = () => {
   return db
 }
 
-const models = { records }
+const models = { Record }
 
 module.exports = { connectDb, models }
