@@ -23,7 +23,7 @@ const recordSchema = new mongoose.Schema({
 })
 
 recordSchema.statics.findByDateAndCounts = async function (startDate, endDate, minCount, maxCount) {
-  return await this.aggregate([
+  return this.aggregate([
     {
       $project: {
         key: 1,
