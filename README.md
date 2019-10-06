@@ -12,13 +12,12 @@
 ```json
 // Model
 {
-   counts: [ 0, 600, 500 ],
-    _id: 58adc57a1f84e37c19df0cfc,
-    key: 'lXTIcYVZIuzxrP01',
-    value: 'QYV8Jr6Kn52OrnL35HWTcWNkl2FcPH3Hc0Q5AtnW5D1UCjrIFSZNcfMWCSsIW7NqdukbL6oshFlBmhgb8wbvqN39qTKCckJ499LzaRYgY87Qszv00DdVJghXGvWYbFiaR5cRQqHsAnkX',
-    createdAt: 2016-09-09T05:07:22.324Z
-    },
-}
+    "_id": "58adc585dedcff7e190af076",
+    "key": "NMBUu74JC1bEGECM",
+    "createdAt": "2016-07-06T13:12:01.175Z",
+    "value": "QYV8Jr6Kn52OrnL35HWTcWNkl2FcPH3Hc0Q5AtnW5D1UCjrIFSZNcfMWCSsIW7NqdukbL6oshFlBmhgb8wbvqN39qTKCckJ499LzaRYgY87Qszv00DdVJghXGvWYbFiaR5cRQqHsAnkX",
+    "counts": [ 0, 600, 500 ]
+  },
 ```
 
 
