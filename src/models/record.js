@@ -21,6 +21,36 @@ const recordSchema = new mongoose.Schema({
     type: Array
   }
 })
-const Record = mongoose.model('records', recordSchema)
+
+recordSchema.statics.findByDateAndCounts = async function (startDate, endDate, minCount, maxCount) {
+  return await this.aggregate([
+    {
+      $project: {
+        key: 1,
+        createdAt: 1,
+        totalCount: {
+          $sum: "$counts"
+        },
+      }
+    },
+    {
+      $match: {
+        $and: [{
+          createdAt: {
+            $gte:
+              new Date(startDate), $lte: new Date(endDate)
+          }
+        }, {
+          totalCount: {
+            $gt: minCount,
+            $lt: maxCount
+          }
+        }]
+      }
+    }
+  ]);
+};
+
+const Record = mongoose.model('Record', recordSchema)
 
 module.exports = Record
