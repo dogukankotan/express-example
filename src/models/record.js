@@ -22,6 +22,7 @@ const recordSchema = new mongoose.Schema({
   }
 })
 
+// Create filter for data and counts
 recordSchema.statics.findByDateAndCounts = async function (startDate, endDate, minCount, maxCount) {
   return this.aggregate([
     {
@@ -52,6 +53,8 @@ recordSchema.statics.findByDateAndCounts = async function (startDate, endDate, m
   ])
 }
 
+// create model
 const Record = mongoose.model('Record', recordSchema)
 
+// export model
 module.exports = Record

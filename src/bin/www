@@ -98,4 +98,5 @@ function onListening() {
   debug('Listening on ' + bind);
 }
 
+// export app for testing
 module.exports = app;

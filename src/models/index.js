@@ -2,7 +2,7 @@ var mongoose = require('mongoose')
 var Record = require('./record')
 
 /**
- * Connect mongodb database.
+ * Creat MongoDB connection promise
  */
 const connectDb = () => {
   try {
@@ -20,5 +20,5 @@ const connectDb = () => {
 }
 
 const models = { Record }
-
+// Export models and connection
 module.exports = { connectDb, models }

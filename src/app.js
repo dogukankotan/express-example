@@ -8,7 +8,9 @@ var indexRouter = require('./routes/index')
 
 var app = express()
 
+// use cors headers for cors protection
 app.use(cors())
+
 app.use(morgan('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
