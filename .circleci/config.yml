@@ -35,7 +35,7 @@ jobs: # a collection of steps
 
 workflows:
   version: 2
-  my-workflow:
+  prod:build:
     jobs:
       - build:
           context: production
