@@ -4,10 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node src/bin/www",
-    "test": "standard && jest"
-  },
-  "standard": {
-    "env": [ "jest" ]
+    "test": "standard && jest --testTimeout=10000"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -21,6 +18,18 @@
   },
   "devDependencies": {
     "jest": "^24.9.0",
-    "standard": "^14.3.1"
+    "standard": "^14.3.1",
+    "supertest": "^4.0.2"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
   }
 }
