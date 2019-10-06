@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node src/bin/www",
-    "test": "standard && jest --testTimeout=10000"
+    "test": "standard && jest --testTimeout=10000 --forceExit"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
