@@ -44,8 +44,8 @@ recordSchema.statics.findByDateAndCounts = async function (startDate, endDate, m
           }
         }, {
           totalCount: {
-            $gt: minCount,
-            $lt: maxCount
+            $gt: parseInt(minCount),
+            $lt: parseInt(maxCount)
           }
         }]
       }
