@@ -7,6 +7,63 @@
 - Production Link on Heroku: https://testapiexpress.herokuapp.com/
   
 
+# API Documentation
+
+**Request URL:** "http://localhost:3000/" 
+
+```sh
+curl -X POST \
+  http://localhost:3000/ \
+  -H 'Content-Type: application/json' \
+  -d '{
+	"startDate": "2016-01-26",
+	"endDate": "2018-02-02",
+	"minCount": 2700,
+	"maxCount": 3000
+}'
+```
+
+- Request Example
+```json
+{
+	"startDate": "2016-01-26",
+	"endDate": "2018-02-02",
+	"minCount": 2700,
+	"maxCount": 3000
+}
+```
+
+- Success Response Example
+```json
+{
+  "code": 200,
+  "msg": "Success",
+  "records": [
+    {
+      "_id": "58adc585dedcff7e190af076",
+      "key": "NMBUu74JC1bEGECM",
+      "createdAt": "2016-07-06T13:12:01.175Z",
+      "totalCount": 2800
+    },
+    {
+      "_id": "58adc585dedcff7e190afbe3",
+      "key": "ut383XMVB1FtNWNP",
+      "createdAt": "2016-07-07T02:25:28.485Z",
+      "totalCount": 2900
+    },
+    {
+      "_id": "58adc57a1f84e37c19df0a61",
+      "key": "840hRiaWF4C1xupD",
+      "createdAt": "2016-07-07T06:34:29.059Z",
+      "totalCount": 2800
+    },
+    ...
+  ],
+  "errors": []
+```
+
+# App
+
 ## Database Model
 
 ```json
